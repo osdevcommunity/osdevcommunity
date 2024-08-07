@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Core Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="absolute inset-0 h-full w-full bg-white bg-[radial-gradient(circle,#d1d5db_1px,transparent_1px)] [background-size:16px_16px]">
+    <div
+      class="min-h-screen flex flex-col items-center gap-5 pt-6 mx-5 md:mx-0">
+      <div class="flex flex-col items-center justify-center w-full gap-2">
+        <a href="oscommunity-sable.vercel.app">
+          <img
+            src="assets/logo.jpg"
+            alt="OS DEV LOGO"
+            class="w-[170px] h-[170px] rounded-full border border-black shadow-md mb-2 transition-transform duration-300 hover:scale-105 active:scale-110"
+          />
+        </a>
+
+        <h1 class="text-4xl font-bold text-center text-gray-700">
+          OS Community
+        </h1>
+
+
+        <p class="text-xl text-center text-gray-700">
+          Community based in India
+          <br class="md:hidden" />
+          by <span class="font-semibold">students</span> for
+          <span class="font-semibold">students</span>
+        </p>
+      </div>
+
+      <div id="team-container" class="w-full"></div>
+
+      <div class="flex flex-col items-center justify-center w-full">
+        <p class="text-gray-700 text-lg text-center mt-5">
+          2024 &copy; OS.dev Community
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const founder = {
+        name: "Kshitij Mishra",
+        role: "Founder",
+        avatar: "./assets/core-team/Kshitij Mishra.jpeg",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/",
+          twitter: "https://x.com/",
+          youtube: "https://youtube.com/",
+          github: "https://github.com/",
+          email: "mailto:@gmail.com",
+        },
+      };
+
+      const coFounders = [
+        {
+          name: "Jyoti Bhasin",
+          role: "Co-founder & Community Manager",
+          avatar: "./assets/core-team/Jyoti Bhasin.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/jyoti-bhasin-7840991ba",
+            twitter: "https://x.com/heyajyotii",
+            github: "https://github.com/jyoti-bhasin",
+            email: "mailto:heyajyotii@gmail.com",
+          },
+        },
+        {
+          name: "Aditya D.",
+          role: "Co-founder & Bangalore Community Lead [PoC]",
+          avatar: "./assets/core-team/Aditya D.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/aditya-d-23453a179/",
+            twitter: "https://x.com/ADITYAD29257528",
+            github: "https://github.com/adi271001",
+            topmate: "https://topmate.io/aditya_d/",
+            email: "mailto:ibetanibex@gmail.com",
+          },
+        },
+      ];
+
+      const coreTeam = [
+        {
+          name: "Saumili Dutta",
+          role: "Kolkata Community Lead [PoC]",
+          avatar: "./assets/core-team/Saumili Dutta.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/saumilidutta/",
+            twitter: "https://x.com/aumiidutta",
+            youtube: "https://www.youtube.com/@saumilidutta",
+            github: "https://github.com/aumiidutta",
+            email: "mailto:saumili.work@gmail.com",
+            website: "https://aumiidutta.github.io/linktree/",
+          },
+        },
+        {
+          name: "Ansh Gupta",
+          role: "New Delhi Community Lead [PoC]",
+          avatar: "./assets/core-team/Ansh Gupta.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/ansh-ml",
+            twitter: "https://x.com/Anshgupta001",
+            github: "https://github.com/Anshg07",
+            email: "mailto:anshgupta072003@gmail.com",
+          },
+        },
+        {
+          name: "Arijit Ghosh",
+          role: "Social media Manager",
+          avatar: "./assets/core-team/Arijit Ghosh.jpg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/rancho2002/",
+            twitter: "https://x.com/rancho2002oct",
+            youtube: "https://youtube.com/@factzandcode",
+            github: "https://github.com/Rancho2002",
+            email: "mailto:subhasghosh196@gmail.com",
+          },
+        },
+        {
+          name: "K Om Senapati",
+          role: "Telegram Moderator",
+          avatar: "./assets/core-team/K OM SENAPATI.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/kom-senapati/",
+            twitter: "https://x.com/kom_senapati",
+            youtube: "https://www.youtube.com/@kom_senapati",
+            github: "https://github.com/kom-senapati",
+            email: "mailto:komnoob123@gmail.com",
+          },
+        },
+        {
+          name: "Aman Gupta",
+          role: "WhatsApp Moderator",
+          avatar: "./assets/core-team/Aman Gupta.jpeg",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/aman-gupta-b7158b198/",
+            twitter: "https://x.com/StreetCodeC",
+            github: "https://github.com/streetcodec",
+            email: "mailto:streetcodec@gmail.com",
+          },
+        },
+      ];
+
+      const generateSocialLinks = (socials) => {
+        return `
+                <div class="flex gap-2">
+                    ${
+                      socials.linkedin
+                        ? `<a href="${socials.linkedin}" target="_blank"><img src="assets/LinkedIn.jpeg" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="LinkedIn"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.twitter
+                        ? `<a href="${socials.twitter}" target="_blank"><img src="assets/X.png" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="X"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.youtube
+                        ? `<a href="${socials.youtube}" target="_blank"><img src="assets/YouTube.png" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="You Tube"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.topmate
+                        ? `<a href="${socials.topmate}" target="_blank"><img src="assets/topmate.png" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="You Tube"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.github
+                        ? `<a href="${socials.github}" target="_blank"><img src="assets/Github.jpeg" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="Github"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.website
+                        ? `<a href="${socials.website}" target="_blank"><img src="assets/website.png" class="w-7 h-7 transition-transform duration-300 hover:scale-110 active:scale-125" alt="Website"></a>`
+                        : ""
+                    }
+                    ${
+                      socials.email
+                        ? `<a href="${socials.email}" target="_blank"><img src="assets/Gmail.png" class="w-8 h-8 transition-transform duration-300 hover:scale-110 active:scale-125" alt="Send an email"></a>`
+                        : ""
+                    }
+                </div>
+            `;
+      };
+
+      const generateMemberHTML = (member) => {
+        return `
+                <div class="flex flex-col items-center gap-2 mb-8">
+                    <img src="${member.avatar}" alt="${
+          member.name
+        }" class="w-24 h-24 rounded-full border border-black shadow-md transition-transform duration-300 hover:scale-105 active:scale-110">
+                    <h2 class="text-2xl font-bold text-center text-gray-700">${
+                      member.name
+                    }</h2>
+                    <h3 class="text-lg font-semibold text-center text-gray-600">${
+                      member.role
+                    }</h3>
+                    ${generateSocialLinks(member.socials)}
+                </div>
+            `;
+      };
+
+      const teamContainer = document.getElementById("team-container");
+      teamContainer.innerHTML = `
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                ${generateMemberHTML(founder)}
+                ${coFounders
+                  .map((member) => generateMemberHTML(member))
+                  .join("")}
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                ${coreTeam.map((member) => generateMemberHTML(member)).join("")}
+            </div>
+        `;
+    </script>
+  </body>
+</html>
