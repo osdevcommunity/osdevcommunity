@@ -2,7 +2,7 @@
 A community based in India for students by students...<br />
 We are a group of tech enthusiast, who set out to bring other enthusiasts together.<br />
 We share tech updates on social media and various resources and jobs in groups.<br />
-[Visit our website](https://oscommunity.vercel.app/)
+[Visit our website](https://osdevcommunity.vercel.app/)
 
 
 ## 🌐 Socials:
